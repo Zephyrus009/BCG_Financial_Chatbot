@@ -92,8 +92,11 @@ PAGE_CONFIG = {"page_title":"BCG Finchat",
 
 st.set_page_config(**PAGE_CONFIG)
 
-st.image("./bcg_x_logo.png", caption="BCG X")
-st.title("BCG Financial Chatbot")
+col_1, col_2, col_3 = st.columns([1,4,1])
+
+with col_2:
+    st.image("./bcg_x_logo.png", width = 200)
+    st.title("BCG Financial Chatbot")
 
 # Initialize chat history
 if "messages" not in st.session_state:
